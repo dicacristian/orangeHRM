@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestContext;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class BasePage {
@@ -27,9 +28,9 @@ public class BasePage {
         driver.get(orangehrmURL);
         context.setAttribute("WebDriver", driver);
     }
-//    @AfterMethod(alwaysRun = true)
-//    public void closePage(){
-//        driver.quit();
-//    }
+    @AfterMethod(alwaysRun = true)
+    public void closePage(){
+        driver.quit();
+    }
 
 }

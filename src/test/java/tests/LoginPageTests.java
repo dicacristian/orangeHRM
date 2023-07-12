@@ -22,6 +22,6 @@ public class LoginPageTests extends BasePage {
     public void invalidPageLogin(String username, String password){
         loginPage().addUsername(username);
         loginPage().addPassword(password);
-        loginPage().clickLoginButton();
+        loginPage().clickInvalidLoginButton();
     }
 }

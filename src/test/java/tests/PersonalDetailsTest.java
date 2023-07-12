@@ -5,6 +5,9 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.BasePage;
 import pages.LoginPage;
+import pages.myInfo.Buttons.AddButton;
+import pages.myInfo.Buttons.SaveButton;
+import pages.myInfo.CommentsField;
 import pages.myInfo.PersonalDetails;
 
 public class PersonalDetailsTest extends BasePage {
@@ -16,9 +19,20 @@ public class PersonalDetailsTest extends BasePage {
         return new LoginPage();
     }
 
+    public CommentsField comments() {
+        return new CommentsField();
+    }
+
+    public AddButton addButton() {
+        return new AddButton();
+    }
+
+    public SaveButton saveButton(){
+        return new SaveButton();
+    }
     @Test(description = "Test the Personal Details Field")
-    @Parameters({"username", "password", "firstName", "middleName", "lastName", "nickName", "employeeId", "driverLicenseNumber", "licenseExpiryDate", "ssnNumber", "sinNumber", "dateOfBirth", "militaryService"})
-    public void personalDetailsTest(String username, String password, String firstName, String middleName, String lastName, String nickName, String employeeId, String driverLicenseNumber, String licenseExpiryDate, String ssnNumber, String sinNumber, String dateOfBirth, String militaryService) {
+    @Parameters({"username", "password", "firstName", "middleName", "lastName", "nickName", "employeeId", "driverLicenseNumber", "licenseExpiryDate", "ssnNumber", "sinNumber", "dateOfBirth", "militaryService", "commentSection"})
+    public void personalDetailsTest(String username, String password, String firstName, String middleName, String lastName, String nickName, String employeeId, String driverLicenseNumber, String licenseExpiryDate, String ssnNumber, String sinNumber, String dateOfBirth, String militaryService, String commentSection) {
         loginPage().addUsername(username);
         loginPage().addPassword(password);
         loginPage().clickLoginButton();
@@ -38,7 +52,13 @@ public class PersonalDetailsTest extends BasePage {
         personalDetails().addDateOfBirth(dateOfBirth);
         personalDetails().clickChooseDateOfBirth();
         personalDetails().addMilitaryService(militaryService);
-        personalDetails().clickSaveButton();
+        saveButton().clickFirstSaveButton();
+        personalDetails().clickSelectBloodType();
+        saveButton().clickSecondSaveButton();
+        addButton().clickAddButton();
+        personalDetails().addFile();
+        comments().addCommentSection(commentSection);
+        saveButton().clickThirdSaveButton();
     }
 
 }

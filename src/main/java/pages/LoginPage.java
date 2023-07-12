@@ -3,6 +3,8 @@ package pages;
 import base.BaseTest;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
+
 
 public class LoginPage extends BaseTest {
     @FindBy(xpath = "//input[@name='username']")
@@ -19,8 +21,16 @@ public class LoginPage extends BaseTest {
     public void addPassword(String password) {
         addText(password, this.password);
     }
-    public void clickLoginButton(){
+
+    public void clickLoginButton() {
         click(loginButton);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index", "The url link is wrong");
+
     }
+    public void clickInvalidLoginButton(){
+        click(loginButton);
+        Assert.assertEquals(driver.getCurrentUrl(),"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+    }
+
 
 }

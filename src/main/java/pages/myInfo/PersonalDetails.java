@@ -45,8 +45,15 @@ public class PersonalDetails extends BaseTest {
     private WebElement closeChooseDateOfBirthField;
     @FindBy(xpath = "(//input)[15]")
     private WebElement militaryService;
-    @FindBy(xpath = "(//button[@type='submit'][normalize-space()='Save'])[1]")
-    private WebElement saveButton;
+
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/form/div[1]/div/div/div/div[2]/div/div/div[1]")
+    private WebElement selectBloodType;
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/form/div[1]/div/div/div/div[2]/div/div[2]/div[5]")
+    private WebElement choosenBloodType;
+
+    @FindBy(xpath = "//input[@type='file']")
+    private WebElement addFileButton;
+
 
     public void clickMyInfoSection() {
         click(myInfoField);
@@ -69,7 +76,7 @@ public class PersonalDetails extends BaseTest {
     }
 
     public void addNickName(String nickName) {
-        addText(nickName, this.nickName);
+        addTextToDisabledTextBox(nickName, this.nickName);
     }
 
     public void addExmployeeId(String employeeId) {
@@ -114,14 +121,19 @@ public class PersonalDetails extends BaseTest {
         click(closeChooseDateOfBirthField);
     }
 
-
     public void addMilitaryService(String militaryService) {
         addText(militaryService, this.militaryService);
     }
 
-    public void clickSaveButton() {
-        click(saveButton);
+
+
+    public void clickSelectBloodType() {
+        click(selectBloodType);
+        click(choosenBloodType);
     }
 
+    public void addFile() {
+        uploadDoc(addFileButton, "E:\\orangeHRM\\Personal Details.txt");
+    }
 
 }

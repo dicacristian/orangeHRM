@@ -23,7 +23,7 @@ public class BaseTest extends BasePage {
         action = new Actions(driver);
     }
 
-    private WebDriverWait waitPage() {
+    protected WebDriverWait waitPage() {
         return new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
@@ -106,7 +106,11 @@ public class BaseTest extends BasePage {
     protected void uploadDoc(WebElement element, String path) {
         element.sendKeys(path);
     }
-
+    public void addTextToDisabledTextBox(String text, WebElement locator) {
+        if (locator.isEnabled()|| locator.isDisplayed()) {
+            addText(text, locator);
+        }
+    }
     public void clickWithRetries(WebElement element) {
         int retryCount = 0;
         boolean actionSuccessful = false;

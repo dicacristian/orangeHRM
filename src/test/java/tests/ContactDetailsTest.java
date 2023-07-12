@@ -5,6 +5,9 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.BasePage;
 import pages.LoginPage;
+import pages.myInfo.Buttons.AddButton;
+import pages.myInfo.Buttons.SaveButton;
+import pages.myInfo.CommentsField;
 import pages.myInfo.ContactDetails;
 
 public class ContactDetailsTest extends BasePage {
@@ -17,9 +20,20 @@ public class ContactDetailsTest extends BasePage {
         return new LoginPage();
     }
 
+    public CommentsField commentsField() {
+        return new CommentsField();
+    }
+
+    public AddButton addButton() {
+        return new AddButton();
+    }
+    public SaveButton saveButton(){
+        return new SaveButton();
+    }
+
     @Test(description = "Test the Contact Details Field")
-    @Parameters({"username", "password", "streetOneAddress", "streetTwoAddress", "city", "state", "postalCode", "homeNumber", "mobile", "workMobile", "workEmail"})
-    public void contactDetailsTest(String username, String password, String streetOneAddress, String streetTwoAddress, String city, String state, String postalCode, String homeNumber, String mobile, String workMobile, String workEmail) {
+    @Parameters({"username", "password", "streetOneAddress", "streetTwoAddress", "city", "state", "postalCode", "homeNumber", "mobile", "workMobile", "workEmail", "comment"})
+    public void contactDetailsTest(String username, String password, String streetOneAddress, String streetTwoAddress, String city, String state, String postalCode, String homeNumber, String mobile, String workMobile, String workEmail, String comment) {
         loginPage().addUsername(username);
         loginPage().addPassword(password);
         loginPage().clickLoginButton();
@@ -35,10 +49,10 @@ public class ContactDetailsTest extends BasePage {
         contactDetails().addMobile(mobile);
         contactDetails().addWorkMobile(workMobile);
         contactDetails().addWorkEmail(workEmail);
-        contactDetails().addFile(0, 200);
-        contactDetails().addPhoto();
-//        contactDetails().clickSaveButton();
-
-
+        saveButton().clickFirstSaveButton();
+        addButton().clickAddButton();
+        contactDetails().addFile();
+        commentsField().addCommentSection(comment);
+        saveButton().clickSecondSaveButton();
     }
 }
