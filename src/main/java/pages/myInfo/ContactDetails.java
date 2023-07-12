@@ -38,11 +38,15 @@ public class ContactDetails extends BaseTest {
     private WebElement workEmail;
     @FindBy(xpath = "//button[normalize-space()='Add']")
     private WebElement addAttachments;
-    @FindBy(xpath = "//i[@class='oxd-icon bi-upload oxd-file-input-icon']")
+    @FindBy(xpath = "//input[@type='file']")
     private WebElement browseButton;
 
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/form/div[1]/div/div/div/div[2]/div/div[1]")
+    @FindBy(xpath = "(//button[@type='submit'][normalize-space()='Save'])[1]")
     private WebElement saveButton;
+    @FindBy(xpath = "//textarea[@placeholder='Type comment here']")
+    private WebElement comment;
+    @FindBy(xpath = "(//button[@type='submit'][normalize-space()='Save'])[2]")
+    private WebElement secondSaveButton;
 
 
     public void clickMyInfoSection() {
@@ -95,18 +99,22 @@ public class ContactDetails extends BaseTest {
         addText(workEmail, this.workEmail);
     }
 
+    public void clickSaveButton() {
+        click(saveButton);
+    }
+
     public void addFile(int x, int y) {
         javascriptExecutor(x, y);
         click(addAttachments);
+        uploadDoc(browseButton, "C:\\Users\\Dicky\\Downloads\\IMG_0500.jpeg");
     }
 
-    public void addPhoto() {
-        click(browseButton);
-
+    public void addComment(String comment) {
+        addText(comment, this.comment);
     }
 
-    public void clickSaveButton() {
-        click(saveButton);
+    public void clickSecondSaveButton() {
+        click(secondSaveButton);
     }
 
 

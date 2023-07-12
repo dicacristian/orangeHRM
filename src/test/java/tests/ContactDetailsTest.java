@@ -18,8 +18,8 @@ public class ContactDetailsTest extends BasePage {
     }
 
     @Test(description = "Test the Contact Details Field")
-    @Parameters({"username", "password", "streetOneAddress", "streetTwoAddress", "city", "state", "postalCode", "homeNumber", "mobile", "workMobile", "workEmail"})
-    public void contactDetailsTest(String username, String password, String streetOneAddress, String streetTwoAddress, String city, String state, String postalCode, String homeNumber, String mobile, String workMobile, String workEmail) {
+    @Parameters({"username", "password", "streetOneAddress", "streetTwoAddress", "city", "state", "postalCode", "homeNumber", "mobile", "workMobile", "workEmail","comment"})
+    public void contactDetailsTest(String username, String password, String streetOneAddress, String streetTwoAddress, String city, String state, String postalCode, String homeNumber, String mobile, String workMobile, String workEmail,String comment) {
         loginPage().addUsername(username);
         loginPage().addPassword(password);
         loginPage().clickLoginButton();
@@ -35,10 +35,10 @@ public class ContactDetailsTest extends BasePage {
         contactDetails().addMobile(mobile);
         contactDetails().addWorkMobile(workMobile);
         contactDetails().addWorkEmail(workEmail);
+        contactDetails().clickSaveButton();
         contactDetails().addFile(0, 200);
-        contactDetails().addPhoto();
-//        contactDetails().clickSaveButton();
-
+        contactDetails().addComment(comment);
+        contactDetails().clickSecondSaveButton();
 
     }
 }

@@ -89,6 +89,7 @@
                         <parameter name="mobile" value="0787456123"></parameter>
                         <parameter name="workMobile" value="1234567890"></parameter>
                         <parameter name="workEmail" value="dica792@gmail.com"></parameter>
+                        <parameter name="comment" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry."></parameter>
                     </include>
                 </methods>
             </class>
