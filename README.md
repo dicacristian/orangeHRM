@@ -8,3 +8,23 @@ ________________________________________________________________________________
 * 	Login Functionality Testing: The login functionality of OrangeHRM Demo will be thoroughly tested to ensure secure and seamless access for users. Different scenarios, such as valid and invalid credentials, password resets, and session management, will be covered.
 *   Myinfo Module Testing: The Myinfo module of OrangeHRM Demo will be tested extensively to ensure its functionality, accuracy, and data integrity. This includes validating user information, updating personal details, managing documents, and any other relevant features.
 *   Test Automation: The Selenium framework will be utilized for automating web browsers and interacting with the OrangeHRM Demo platform. It provides a powerful set of tools for simulating user actions, validating web elements, and performing assertions.
+
+# Features 
+ *  Page Object Model
+ *  Data Driven Testing
+
+______________________________________________________________________________________________________________________________________________________________________
+# I made a video with the entire testing process
+
+
+https://github.com/dicacristian/orangeHRM/assets/85904271/fbad59cf-0dfc-4bcb-85f8-6db31a346c4c
+
+# Setup
+
+* Install and configure Java for your Operation System
+* Setup your IDE
+* Import cloned repository as project
+* To run tests, search and click in repository clone the file "SmokeTestSuite.xml" and run
+
+
+
