@@ -27,9 +27,10 @@ public class PersonalDetailsTest extends BasePage {
         return new AddButton();
     }
 
-    public SaveButton saveButton(){
+    public SaveButton saveButton() {
         return new SaveButton();
     }
+
     @Test(description = "Test the Personal Details Field")
     @Parameters({"username", "password", "firstName", "middleName", "lastName", "nickName", "employeeId", "driverLicenseNumber", "licenseExpiryDate", "ssnNumber", "sinNumber", "dateOfBirth", "militaryService", "commentSection"})
     public void personalDetailsTest(String username, String password, String firstName, String middleName, String lastName, String nickName, String employeeId, String driverLicenseNumber, String licenseExpiryDate, String ssnNumber, String sinNumber, String dateOfBirth, String militaryService, String commentSection) {

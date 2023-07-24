@@ -21,8 +21,6 @@ public class Immigration extends BaseTest {
     private WebElement eligibleStatus;
     @FindBy(xpath = "(//div[@class='oxd-select-text-input'])[1]")
     private WebElement issuedBy;
-//    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[2]/div/div[5]/div/div[2]/div/div[2]/div[177]/span")
-//    private WebElement countryChoosen;
     @FindBy(xpath = "//div[@class='oxd-select-option']")
     private List<WebElement> countryChoosen;
     @FindBy(xpath = "(//input[@placeholder='yyyy-mm-dd'])[3]")

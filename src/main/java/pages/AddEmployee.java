@@ -84,7 +84,7 @@ public class AddEmployee extends BaseTest {
     }
 
     public void clickSaveButton(int x, int y) {
-        javascriptExecutor(x,y);
+        javascriptExecutor(x, y);
         click(saveButton);
     }
 

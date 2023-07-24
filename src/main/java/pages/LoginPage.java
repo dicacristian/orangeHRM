@@ -13,7 +13,6 @@ public class LoginPage extends BaseTest {
     private WebElement password;
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement loginButton;
-
     public void addUsername(String username) {
         addText(username, this.username);
     }
@@ -27,9 +26,9 @@ public class LoginPage extends BaseTest {
         Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index", "The url link is wrong");
 
     }
-    public void clickInvalidLoginButton(){
+    public void clickInvalidLoginButton() {
         click(loginButton);
-        Assert.assertEquals(driver.getCurrentUrl(),"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
 
 

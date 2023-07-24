@@ -19,15 +19,12 @@ public class CommentsField extends BaseTest {
     public void addCommentSection(String commentSection) {
         addText(commentSection, this.commentSection);
     }
-
     public void addCommentsSection(String commentsSection) {
         addText(commentsSection, this.commentsSection);
     }
-
     public void addCommentFieldEmpty(String commentFieldEmpty) {
         addText(commentFieldEmpty, this.commentFieldEmpty);
     }
-
     public void addAnotherCommentFieldEmpty(String secondCommentFieldEmpty) {
         addText(secondCommentFieldEmpty, this.secondCommentFieldEmpty);
     }

@@ -17,14 +17,16 @@ public class ImigrationTest extends BasePage {
     public Immigration immigration() {
         return new Immigration();
     }
-    public CommentsField commentsField(){
+
+    public CommentsField commentsField() {
         return new CommentsField();
     }
+
     public AddButton addButton() {
         return new AddButton();
     }
 
-    public SaveButton saveButton(){
+    public SaveButton saveButton() {
         return new SaveButton();
     }
 

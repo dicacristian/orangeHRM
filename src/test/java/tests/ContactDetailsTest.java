@@ -27,7 +27,8 @@ public class ContactDetailsTest extends BasePage {
     public AddButton addButton() {
         return new AddButton();
     }
-    public SaveButton saveButton(){
+
+    public SaveButton saveButton() {
         return new SaveButton();
     }
 

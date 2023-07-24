@@ -14,7 +14,6 @@ public class SearchJob extends BaseTest {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/header/div[2]/nav/ul/li[2]/ul/li[1]")
     private WebElement jobTitle;
 
-
     @FindBy(xpath = "//i[@class='oxd-icon bi-trash']")
     private WebElement deleteButton;
     @FindBy(xpath = "//*[@id='app']/div[3]/div/div/div/div[3]/button[2]")
@@ -31,8 +30,6 @@ public class SearchJob extends BaseTest {
     public void clickTitleJob() {
         click(jobTitle);
     }
-
-
 
     public void clickDeleteButton() {
         click(deleteButton);

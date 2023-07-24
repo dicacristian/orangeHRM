@@ -9,7 +9,6 @@ public class Dependents extends BaseTest {
     private WebElement myInfoField;
     @FindBy(xpath = "//a[normalize-space()='Dependents']")
     private WebElement dependentsButton;
-
     @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[1]/div/div[2]/input")
     private WebElement nameField;
     @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[2]/div/div[2]/div/div/div[1]")
@@ -20,10 +19,9 @@ public class Dependents extends BaseTest {
     private WebElement specifyField;
     @FindBy(xpath = "//input[@placeholder='yyyy-mm-dd']")
     private WebElement dateOfBirth;
-
-
     @FindBy(xpath = "//input[@type='file']")
     private WebElement addFileButton;
+
     public void clickMyInfoSection() {
         click(myInfoField);
     }
@@ -31,7 +29,6 @@ public class Dependents extends BaseTest {
     public void clickDependents() {
         click(dependentsButton);
     }
-
 
     public void addNameField(String nameField) {
         addText(nameField, this.nameField);

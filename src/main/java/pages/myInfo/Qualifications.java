@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
-import java.util.logging.XMLFormatter;
 
 public class Qualifications extends BaseTest {
     @FindBy(xpath = "//span[normalize-space()='My Info']")
@@ -75,7 +74,6 @@ public class Qualifications extends BaseTest {
     private WebElement issuedDate;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[6]/div[1]/form/div[2]/div/div[2]/div/div[2]/div/div/input")
     private WebElement expiryDate;
-
     @FindBy(xpath = "//input[@type='file']")
     private WebElement addFileButton;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[7]/div/form/div[2]/div/div/div/div[2]/textarea")
@@ -88,7 +86,6 @@ public class Qualifications extends BaseTest {
     public void clickQualifications() {
         click(qualificationButton);
     }
-
 
     public void addCompanyName(String companyName) {
         addText(companyName, this.companyName);
@@ -110,7 +107,6 @@ public class Qualifications extends BaseTest {
     public void addWorkExperienceComment(String workExperienceComment) {
         addText(workExperienceComment, this.workExperienceComment);
     }
-
 
     public void clickSelectLevel(int x, int y) {
         javascriptExecutor(x, y);
@@ -153,7 +149,6 @@ public class Qualifications extends BaseTest {
         addText(yearsOfExperience, this.yearsOfExperience);
     }
 
-
     public void clickSelectLanguage() {
         click(selectLanguage);
         click(choosenLanguage);
@@ -168,9 +163,7 @@ public class Qualifications extends BaseTest {
     public void clickChooseCompetency() {
         click(chooseCompetency);
         action(sortRandomElem(chooseRandom));
-
     }
-
 
     public void clickSelectLicenseType() {
         click(selectLicenseType);
@@ -188,7 +181,6 @@ public class Qualifications extends BaseTest {
     public void addExpiryDate(String expiryDate) {
         addText(expiryDate, this.expiryDate);
     }
-
 
     public void addFile() {
         uploadDoc(addFileButton, "E:\\orangeHRM\\Qualifications.txt");

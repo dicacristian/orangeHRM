@@ -17,18 +17,22 @@ public class MembershipsTest extends BasePage {
     public Memberships memberships() {
         return new Memberships();
     }
-    public CommentsField commentsField(){
+
+    public CommentsField commentsField() {
         return new CommentsField();
     }
+
     public AddButton addButton() {
         return new AddButton();
     }
-    public SaveButton saveButton(){
+
+    public SaveButton saveButton() {
         return new SaveButton();
     }
+
     @Test(description = "Test the Memberships Field")
-    @Parameters({"username", "password", "subscriptionAmount", "subcriptionCommerceDate", "subscriptionRenewalDate","commentAddAttachmentMemberships"})
-    public void membershipsTest(String username, String password, String subscriptionAmount, String subcriptionCommerceDate, String subscriptionRenewalDate,String commentAddAttachmentMemberships) {
+    @Parameters({"username", "password", "subscriptionAmount", "subcriptionCommerceDate", "subscriptionRenewalDate", "commentAddAttachmentMemberships"})
+    public void membershipsTest(String username, String password, String subscriptionAmount, String subcriptionCommerceDate, String subscriptionRenewalDate, String commentAddAttachmentMemberships) {
         loginPage().addUsername(username);
         loginPage().addPassword(password);
         loginPage().clickLoginButton();
@@ -43,7 +47,7 @@ public class MembershipsTest extends BasePage {
         memberships().addSubscriptionRenewalDate(subscriptionRenewalDate);
         saveButton().clickFirstSaveButton();
         addButton().clickSecondAddButtonOnThePage();
-        memberships().addFile(0,100);
+        memberships().addFile(0, 100);
         commentsField().addCommentSection(commentAddAttachmentMemberships);
         saveButton().clickSecondSaveButton();
     }

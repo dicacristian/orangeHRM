@@ -13,7 +13,6 @@ import org.testng.annotations.BeforeMethod;
 public class BasePage {
     public static WebDriver driver;
     String orangehrmURL = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
-
     @BeforeMethod(alwaysRun = true)
     public void openPage(ITestContext context) {
         WebDriverManager.chromedriver().setup();
@@ -25,7 +24,7 @@ public class BasePage {
         context.setAttribute("WebDriver", driver);
     }
     @AfterMethod(alwaysRun = true)
-    public void closePage(){
+    public void closePage() {
         driver.quit();
     }
 

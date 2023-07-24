@@ -40,7 +40,6 @@ public class SearchUsers extends BaseTest {
         click(userRole);
     }
 
-
     public void clickAdminUserRole() {
         driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MICROSECONDS);
         Actions actions = new Actions(driver);

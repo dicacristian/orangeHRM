@@ -34,7 +34,7 @@ public class AddEmployeeTest extends BasePage {
         addEmployee().addUsernameLoginDetails(usernameLoginDetails);
         addEmployee().addPasswordLoginDetails(passwordLoginDetails);
         addEmployee().addConfirmPasswordLoginDetails(confirmPasswordLoginDetails);
-        addEmployee().clickSaveButton(0,700);
+        addEmployee().clickSaveButton(0, 700);
     }
 }
 

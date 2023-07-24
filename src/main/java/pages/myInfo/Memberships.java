@@ -36,7 +36,6 @@ public class Memberships extends BaseTest {
     private WebElement addFileButton;
 
 
-
     public void clickMyInfoSection() {
         click(myInfoField);
     }
@@ -73,6 +72,7 @@ public class Memberships extends BaseTest {
         addText(subscriptionRenewalDate, this.subscriptionRenewalDate);
         click(closeSubscriptionRenewalDate);
     }
+
     public void addFile(int x, int y) {
         javascriptExecutor(x, y);
         uploadDoc(addFileButton, "E:\\orangeHRM\\Qualifications.txt");
