@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.util.List;
+import java.util.Random;
 
 public class ContactDetails extends BaseTest {
     @FindBy(xpath = "//span[normalize-space()='My Info']")
@@ -22,6 +24,9 @@ public class ContactDetails extends BaseTest {
     private WebElement city;
     @FindBy(xpath = "(//input)[5]")
     private WebElement state;
+
+
+
     @FindBy(xpath = "(//input)[6]")
     private WebElement postalCode;
     @FindBy(xpath = "//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow']")
@@ -68,6 +73,8 @@ public class ContactDetails extends BaseTest {
     public void addPostalCode(String postalCode) {
         addText(postalCode, this.postalCode);
     }
+
+
 
     public void clickChooseCountry() {
         click(chooseCountry);

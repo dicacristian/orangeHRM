@@ -4,6 +4,7 @@ import base.BaseTest;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
 import java.util.logging.XMLFormatter;
 
 public class Qualifications extends BaseTest {
@@ -26,8 +27,11 @@ public class Qualifications extends BaseTest {
 
     @FindBy(xpath = "(//div[@class='oxd-select-text-input'])[1]")
     private WebElement selectLevel;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[2]/span")
-    private WebElement chooseLevelSelect;
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[5]")
+    private WebElement choosenSelectLevel;
+    @FindBy(xpath = "//div[@class='oxd-select-option']")
+    private List<WebElement> chooseRandom;
+
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/form/div[1]/div/div[2]/div/div[2]/input")
     private WebElement institute;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/form/div[1]/div/div[3]/div/div[2]/input")
@@ -40,11 +44,11 @@ public class Qualifications extends BaseTest {
     private WebElement startDate;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/form/div[2]/div/div[2]/div/div[2]/div/div/input")
     private WebElement endDate;
-
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[4]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div/div[1]")
     private WebElement selectSkill;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[4]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[8]/span")
-    private WebElement choosenSkill;
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[4]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[8]")
+    private WebElement selectedSkill;
+
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[4]/div[1]/form/div[1]/div/div[2]/div/div[2]/input")
     private WebElement yearsOfExperience;
 
@@ -63,8 +67,8 @@ public class Qualifications extends BaseTest {
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[6]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div/div[1]")
     private WebElement selectLicenseType;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[6]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[4]/span")
-    private WebElement choosenLicenseType;
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[6]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[6]")
+    private WebElement selectedLicenseType;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[6]/div[1]/form/div[1]/div/div[2]/div/div[2]/input")
     private WebElement licenseNumber;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[6]/div[1]/form/div[2]/div/div[1]/div/div[2]/div/div/input")
@@ -109,9 +113,9 @@ public class Qualifications extends BaseTest {
 
 
     public void clickSelectLevel(int x, int y) {
-
+        javascriptExecutor(x, y);
         click(selectLevel);
-        click(chooseLevelSelect);
+        click(choosenSelectLevel);
     }
 
     public void addInstitute(int x, int y, String institute) {
@@ -142,7 +146,7 @@ public class Qualifications extends BaseTest {
 
     public void clickSelectSkill() {
         click(selectSkill);
-        click(choosenSkill);
+        click(selectedSkill);
     }
 
     public void addYearsOfExperience(String yearsOfExperience) {
@@ -163,13 +167,14 @@ public class Qualifications extends BaseTest {
 
     public void clickChooseCompetency() {
         click(chooseCompetency);
-        click(choosenCompetency);
+        action(sortRandomElem(chooseRandom));
+
     }
 
 
     public void clickSelectLicenseType() {
         click(selectLicenseType);
-        click(choosenLicenseType);
+        click(selectedLicenseType);
     }
 
     public void addLicenseNumber(String licenseNumber) {

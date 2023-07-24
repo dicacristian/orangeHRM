@@ -4,6 +4,8 @@ import base.BaseTest;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class PersonalDetails extends BaseTest {
     @FindBy(xpath = "//span[normalize-space()='My Info']")
     private WebElement myInfoField;
@@ -48,8 +50,8 @@ public class PersonalDetails extends BaseTest {
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/form/div[1]/div/div/div/div[2]/div/div/div[1]")
     private WebElement selectBloodType;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/form/div[1]/div/div/div/div[2]/div/div[2]/div[5]")
-    private WebElement choosenBloodType;
+    @FindBy(xpath = "//div[@class='oxd-select-option']")
+    private List<WebElement> choosenBloodType;
 
     @FindBy(xpath = "//input[@type='file']")
     private WebElement addFileButton;
@@ -126,10 +128,9 @@ public class PersonalDetails extends BaseTest {
     }
 
 
-
     public void clickSelectBloodType() {
         click(selectBloodType);
-        click(choosenBloodType);
+        action(sortRandomElem(choosenBloodType));
     }
 
     public void addFile() {

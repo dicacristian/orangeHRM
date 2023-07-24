@@ -4,6 +4,8 @@ import base.BaseTest;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class Memberships extends BaseTest {
     @FindBy(xpath = "//span[normalize-space()='My Info']")
     private WebElement myInfoField;
@@ -21,8 +23,8 @@ public class Memberships extends BaseTest {
     private WebElement subscriptionAmount;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[4]/div/div[2]/div/div/div[1]")
     private WebElement currency;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[4]/div/div[2]/div/div[2]/div[150]")
-    private WebElement selectCurrency;
+    @FindBy(xpath = "//div[@class='oxd-select-option']")
+    private List<WebElement> chooseRandom;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[5]/div/div[2]/div/div/input")
     private WebElement subcriptionCommerceDate;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[6]/div/div[2]/div/div/input")
@@ -60,7 +62,7 @@ public class Memberships extends BaseTest {
 
     public void addSelectCurrency() {
         click(currency);
-        click(selectCurrency);
+        action(sortRandomElem(chooseRandom));
     }
 
     public void addSubscriptionCommerceDate(String subcriptionCommerceDate) {

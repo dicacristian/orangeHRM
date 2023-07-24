@@ -4,6 +4,8 @@ import base.BaseTest;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class Immigration extends BaseTest {
     @FindBy(xpath = "//span[normalize-space()='My Info']")
     private WebElement myInfoField;
@@ -19,8 +21,10 @@ public class Immigration extends BaseTest {
     private WebElement eligibleStatus;
     @FindBy(xpath = "(//div[@class='oxd-select-text-input'])[1]")
     private WebElement issuedBy;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[2]/div/div[5]/div/div[2]/div/div[2]/div[177]/span")
-    private WebElement countryChoosen;
+//    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[2]/div/div[5]/div/div[2]/div/div[2]/div[177]/span")
+//    private WebElement countryChoosen;
+    @FindBy(xpath = "//div[@class='oxd-select-option']")
+    private List<WebElement> countryChoosen;
     @FindBy(xpath = "(//input[@placeholder='yyyy-mm-dd'])[3]")
     private WebElement eligibleReviewDate;
     @FindBy(xpath = "(//textarea[@placeholder='Type Comments here'])[1]")
@@ -56,7 +60,7 @@ public class Immigration extends BaseTest {
 
     public void addIssuedBy() {
         click(issuedBy);
-        click(countryChoosen);
+        action(sortRandomElem(countryChoosen));
     }
 
     public void addEligibleReviewDate(String eligibleReviewDate) {
