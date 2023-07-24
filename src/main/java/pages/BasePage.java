@@ -24,9 +24,9 @@ public class BasePage {
         driver.get(orangehrmURL);
         context.setAttribute("WebDriver", driver);
     }
-//    @AfterMethod(alwaysRun = true)
-//    public void closePage(){
-//        driver.quit();
-//    }
+    @AfterMethod(alwaysRun = true)
+    public void closePage(){
+        driver.quit();
+    }
 
 }
