@@ -25,8 +25,8 @@
                                             <include name="searchUsers">
                                                 <parameter name="username" value="Admin"></parameter>
                                                 <parameter name="password" value="admin123"></parameter>
-                                                <parameter name="userNameSearch" value="Admin"></parameter>
-                                                <parameter name="employeeName" value="Dica Alexandru"></parameter>
+                                                <parameter name="userNameSearch" value="Aaliyah.Haq"></parameter>
+                                                <parameter name="employeeName" value="Aaliyah Haq"></parameter>
                                             </include>
                                         </methods>
                                     </class>
@@ -47,7 +47,7 @@
                                                 <parameter name="middleName" value="George"></parameter>
                                                 <parameter name="lastName" value="Popa"></parameter>
                                                 <parameter name="employeeID" value="1234"></parameter>
-                                                <parameter name="usernameLoginDetails" value="adi123king12"></parameter>
+                                                <parameter name="usernameLoginDetails" value="adi112king12"></parameter>
                                                 <parameter name="passwordLoginDetails" value="abc123123123"></parameter>
                                                 <parameter name="confirmPasswordLoginDetails" value="abc123123123"></parameter>
                                             </include>

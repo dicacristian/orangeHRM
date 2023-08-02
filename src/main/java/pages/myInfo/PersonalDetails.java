@@ -31,13 +31,13 @@ public class PersonalDetails extends BaseTest {
     private WebElement ssnNumber;
     @FindBy(xpath = "(//input)[11]")
     private WebElement sinNumber;
-    @FindBy(xpath = "(//i)[7]")
+    @FindBy(xpath = "(//div[@class='oxd-select-wrapper'])[1]//div[@tabindex='0']")
     private WebElement selectNationality;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[3]/div[1]/div[1]/div/div[2]/div/div[2]/div[147]")
+    @FindBy(xpath = "//span[contains(text(),'Romanian')]")
     private WebElement choosenNationality;
     @FindBy(xpath = "(//i)[8]")
     private WebElement relationshipStatus;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[3]/div[1]/div[2]/div/div[2]/div/div[2]/div[2]")
+    @FindBy(xpath = "//span[contains(text(),'Married')]")
     private WebElement choosenRelationshipStatus;
     @FindBy(xpath = "(//input)[12]")
     private WebElement dateOfBirth;
@@ -48,7 +48,7 @@ public class PersonalDetails extends BaseTest {
     @FindBy(xpath = "(//input)[15]")
     private WebElement militaryService;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/form/div[1]/div/div/div/div[2]/div/div/div[1]")
+    @FindBy(xpath = "(//div[@class='oxd-select-wrapper'])[3]//div[@tabindex='0']")
     private WebElement selectBloodType;
     @FindBy(xpath = "//div[@class='oxd-select-option']")
     private List<WebElement> choosenBloodType;

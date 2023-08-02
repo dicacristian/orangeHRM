@@ -8,22 +8,22 @@ import org.openqa.selenium.support.FindBy;
 import java.util.concurrent.TimeUnit;
 
 public class SearchUsers extends BaseTest {
-    @FindBy(xpath = "/html/body/div/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a")
+    @FindBy(xpath = "//a[normalize-space()='Admin']")
     private WebElement adminButton;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/input")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[1]//input")
     private WebElement usernameSearch;
 
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div/div[1]")
+    @FindBy(xpath = "(//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow'])[1]")
     private WebElement userRole;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div[2]/div[2]/span")
+    @FindBy(xpath = "(//div[@class='oxd-select-option'])[3]")
     private WebElement choosenUserRole;
     @FindBy(xpath = "//input[@placeholder='Type for hints...']")
     private WebElement employeeName;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div[2]/div/span")
+    @FindBy(xpath = "//div[@class='oxd-autocomplete-option']")
     private WebElement nameEmployeeClick;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[4]/div/div[2]/div/div")
+    @FindBy(xpath = "(//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow'])[2]")
     private WebElement selectStatus;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[4]/div/div[2]/div/div[2]/div[2]")
+    @FindBy(xpath = "(//div[@class='oxd-select-option'])[2]")
     private WebElement enableButton;
     @FindBy(xpath = "//button[normalize-space()='Search']")
     private WebElement searchButton;
@@ -41,9 +41,6 @@ public class SearchUsers extends BaseTest {
     }
 
     public void clickAdminUserRole() {
-        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MICROSECONDS);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(userRole).perform();
         click(choosenUserRole);
     }
 

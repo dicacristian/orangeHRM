@@ -15,65 +15,65 @@ public class Qualifications extends BaseTest {
     private WebElement companyName;
     @FindBy(xpath = "(//input)[3]")
     private WebElement jobTitle;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/form/div[2]/div/div[1]/div/div[2]/div/div/input")
+    @FindBy(xpath = "(//input[@placeholder='yyyy-mm-dd'])[1]")
     private WebElement fromDate;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/form/div[2]/div/div[2]/div/div[2]/div/div/input")
+    @FindBy(xpath = "(//input[@placeholder='yyyy-mm-dd'])[2]")
     private WebElement toDate;
     @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/form/div[2]/div/div[2]/div/div[2]/div/div[2]/div/div[4]/div/div[3]")
     private WebElement closeButton;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/form/div[3]/div/div/div/div[2]/textarea")
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/form/div[3]/div/div/div/div[2]/textarea")
     private WebElement workExperienceComment;
 
     @FindBy(xpath = "(//div[@class='oxd-select-text-input'])[1]")
     private WebElement selectLevel;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[5]")
+    @FindBy(xpath = "//span[contains(text(),'High School Diploma')]")
     private WebElement choosenSelectLevel;
-    @FindBy(xpath = "//div[@class='oxd-select-option']")
-    private List<WebElement> chooseRandom;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/form/div[1]/div/div[2]/div/div[2]/input")
+
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[7]//input")
     private WebElement institute;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/form/div[1]/div/div[3]/div/div[2]/input")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[8]//input")
     private WebElement specialization;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/form/div[1]/div/div[4]/div/div[2]/input")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[9]//input")
     private WebElement year;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/form/div[1]/div/div[5]/div/div[2]/input")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[10]//input")
     private WebElement gpaScore;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/form/div[2]/div/div[1]/div/div[2]/div/div/input")
+    @FindBy(xpath = "(//input[@placeholder='yyyy-mm-dd'])[3]")
     private WebElement startDate;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[3]/div[1]/form/div[2]/div/div[2]/div/div[2]/div/div/input")
+    @FindBy(xpath = "(//input[@placeholder='yyyy-mm-dd'])[4]")
     private WebElement endDate;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[4]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div/div[1]")
+    @FindBy(xpath = "(//div[@class='oxd-select-wrapper'])[2]//div[@tabindex='0']")
     private WebElement selectSkill;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[4]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[8]")
+    @FindBy(xpath = "(//div[@role='option'])[2]")
     private WebElement selectedSkill;
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[4]/div[1]/form/div[1]/div/div[2]/div/div[2]/input")
     private WebElement yearsOfExperience;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[5]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div")
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[5]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div/div[1]")
     private WebElement selectLanguage;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[5]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[4]")
+    @FindBy(xpath = "(//div[@class='oxd-select-option'])[3]")
     private WebElement choosenLanguage;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[5]/div[1]/form/div[1]/div/div[2]/div/div[2]/div/div/div[1]")
+    @FindBy(xpath = "(//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow'])[4]")
     private WebElement chooseFluency;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[5]/div[1]/form/div[1]/div/div[2]/div/div[2]/div/div/div[1]")
+    @FindBy(xpath = "(//div[@class='oxd-select-option'])[2]")
     private WebElement choosenFluency;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[5]/div[1]/form/div[1]/div/div[3]/div/div[2]/div/div")
+    @FindBy(xpath = "(//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow'])[5]")
     private WebElement chooseCompetency;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[5]/div[1]/form/div[1]/div/div[3]/div/div[2]/div/div[2]/div[3]")
-    private WebElement choosenCompetency;
+    @FindBy(xpath = "//div[@class='oxd-select-option']")
+    private List<WebElement> choosenCompetency;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[6]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div/div[1]")
+    @FindBy(xpath = "(//div[@class='oxd-select-wrapper'])[6]//div[@tabindex='0']")
     private WebElement selectLicenseType;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[6]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[6]")
+    @FindBy(xpath = "(//div[@class='oxd-select-option'])[4]")
     private WebElement selectedLicenseType;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[6]/div[1]/form/div[1]/div/div[2]/div/div[2]/input")
+    @FindBy(xpath = "/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[2]/div[6]/div[1]/form/div[1]/div/div[2]/div/div[2]/input")
     private WebElement licenseNumber;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[6]/div[1]/form/div[2]/div/div[1]/div/div[2]/div/div/input")
+    @FindBy(xpath = "(//input[@placeholder='yyyy-mm-dd'])[1]")
     private WebElement issuedDate;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[6]/div[1]/form/div[2]/div/div[2]/div/div[2]/div/div/input")
+    @FindBy(xpath = "(//input[@placeholder='yyyy-mm-dd'])[2]")
     private WebElement expiryDate;
+
     @FindBy(xpath = "//input[@type='file']")
     private WebElement addFileButton;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[7]/div/form/div[2]/div/div/div/div[2]/textarea")
@@ -86,6 +86,7 @@ public class Qualifications extends BaseTest {
     public void clickQualifications() {
         click(qualificationButton);
     }
+
 
     public void addCompanyName(String companyName) {
         addText(companyName, this.companyName);
@@ -107,6 +108,7 @@ public class Qualifications extends BaseTest {
     public void addWorkExperienceComment(String workExperienceComment) {
         addText(workExperienceComment, this.workExperienceComment);
     }
+
 
     public void clickSelectLevel(int x, int y) {
         javascriptExecutor(x, y);
@@ -144,7 +146,6 @@ public class Qualifications extends BaseTest {
         click(selectSkill);
         click(selectedSkill);
     }
-
     public void addYearsOfExperience(String yearsOfExperience) {
         addText(yearsOfExperience, this.yearsOfExperience);
     }
@@ -162,8 +163,10 @@ public class Qualifications extends BaseTest {
 
     public void clickChooseCompetency() {
         click(chooseCompetency);
-        action(sortRandomElem(chooseRandom));
+        action(sortRandomElem(choosenCompetency));
+
     }
+
 
     public void clickSelectLicenseType() {
         click(selectLicenseType);
@@ -181,6 +184,7 @@ public class Qualifications extends BaseTest {
     public void addExpiryDate(String expiryDate) {
         addText(expiryDate, this.expiryDate);
     }
+
 
     public void addFile() {
         uploadDoc(addFileButton, "E:\\orangeHRM\\Qualifications.txt");

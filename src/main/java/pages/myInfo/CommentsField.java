@@ -12,9 +12,10 @@ public class CommentsField extends BaseTest {
     private WebElement commentsSection;
     @FindBy(xpath = "(//textarea[@class='oxd-textarea oxd-textarea--active oxd-textarea--resize-vertical'])[1]")
     private WebElement commentFieldEmpty;
-    @FindBy(xpath = "//div[@class='orangehrm-horizontal-padding orangehrm-top-padding']//div[2]//div[1]//div[1]//div[1]//div[2]//textarea[1]")
+    @FindBy(xpath = "/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[2]/div[4]/div[1]/form/div[2]/div/div/div/div[2]/textarea")
     private WebElement secondCommentFieldEmpty;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[5]/div[1]/form/div[2]/div/div/div/div[2]/textarea")
+
+    @FindBy(xpath = "/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[2]/div[5]/div[1]/form/div[2]/div/div/div/div[2]/textarea")
     private WebElement thirdCommentFieldEmpty;
     public void addCommentSection(String commentSection) {
         addText(commentSection, this.commentSection);

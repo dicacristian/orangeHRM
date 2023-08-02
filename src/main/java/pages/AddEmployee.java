@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class AddEmployee extends BaseTest {
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a")
+    @FindBy(xpath = "//a[normalize-space()='PIM']")
     private WebElement pimButton;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/header/div[2]/nav/ul/li[3]/a")
+    @FindBy(xpath = "//a[normalize-space()='Add Employee']")
     private WebElement addEmployeeButton;
     @FindBy(xpath = "//input[@name='firstName']")
     private WebElement firstName;
@@ -16,15 +16,15 @@ public class AddEmployee extends BaseTest {
     private WebElement middleName;
     @FindBy(xpath = "//input[@name='lastName']")
     private WebElement lastName;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[5]//input")
     private WebElement employeeID;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[1]/div[1]/div/div[2]/div/button")
+    @FindBy(xpath = "(//button[@type='button'])[3]")
     private WebElement filePhoto;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[2]/div/label/span")
+    @FindBy(xpath = "//span[@class='oxd-switch-input oxd-switch-input--active --label-right']")
     private WebElement loginDetails;
     @FindBy(xpath = "//label[normalize-space()='Disabled']")
     private WebElement statusDetails;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[3]/div/div[1]/div/div[2]/input")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[6]//input")
     private WebElement usernameLoginDetails;
 
     @FindBy(xpath = "(//input[@type='password'])[1]")

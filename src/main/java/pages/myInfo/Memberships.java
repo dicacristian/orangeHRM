@@ -11,23 +11,23 @@ public class Memberships extends BaseTest {
     private WebElement myInfoField;
     @FindBy(xpath = "//a[normalize-space()='Memberships']")
     private WebElement membershipsButton;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div/div[1]")
+    @FindBy(xpath = "(//div[@class='oxd-select-wrapper'])[1]//div[@tabindex='0']")
     private WebElement chooseMembership;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[3]/span")
+    @FindBy(xpath = "//span[contains(text(),'Chartered Institute of Marketing (CIM)')]")
     private WebElement choosenMembership;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[2]/div/div[2]/div/div/div[1]")
+    @FindBy(xpath = "(//div[@class='oxd-select-wrapper'])[2]//div[@tabindex='0']")
     private WebElement chooseSubscriptionPaidBy;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[2]/div/div[2]/div/div[2]/div[2]/span")
+    @FindBy(xpath = "//span[contains(text(),'Company')]")
     private WebElement choosenSubcriptionPaidBy;
     @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[2]")
     private WebElement subscriptionAmount;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[4]/div/div[2]/div/div/div[1]")
+    @FindBy(xpath = "(//div[@class='oxd-select-wrapper'])[3]//div[@tabindex='0']")
     private WebElement currency;
     @FindBy(xpath = "//div[@class='oxd-select-option']")
     private List<WebElement> chooseRandom;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[5]/div/div[2]/div/div/input")
+    @FindBy(xpath = "(//input[@placeholder='yyyy-mm-dd'])[1]")
     private WebElement subcriptionCommerceDate;
-    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[6]/div/div[2]/div/div/input")
+    @FindBy(xpath = "(//input[@placeholder='yyyy-mm-dd'])[2]")
     private WebElement subscriptionRenewalDate;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[6]/div/div[2]/div/div[2]/div/div[4]/div/div[3]")
     private WebElement closeSubscriptionRenewalDate;

@@ -25,12 +25,9 @@ public class Immigration extends BaseTest {
     private List<WebElement> countryChoosen;
     @FindBy(xpath = "(//input[@placeholder='yyyy-mm-dd'])[3]")
     private WebElement eligibleReviewDate;
-    @FindBy(xpath = "(//textarea[@placeholder='Type Comments here'])[1]")
-    private WebElement immigrationComment;
+
     @FindBy(xpath = "//input[@type='file']")
     private WebElement addFileButton;
-    @FindBy(xpath = "//textarea[@placeholder='Type comment here']")
-    private WebElement commentSection;
 
     public void clickMyInfoSection() {
         click(myInfoField);
@@ -61,21 +58,8 @@ public class Immigration extends BaseTest {
         action(sortRandomElem(countryChoosen));
     }
 
-    public void addEligibleReviewDate(String eligibleReviewDate) {
-        addText(eligibleReviewDate, this.eligibleReviewDate);
-    }
-
-    public void addImmigrationComment(String immigrationComment) {
-        addText(immigrationComment, this.immigrationComment);
-    }
-
     public void addFile(int x, int y) {
         javascriptExecutor(x, y);
         uploadDoc(addFileButton, "E:\\orangeHRM\\Immigration.txt");
-    }
-
-    public void addCommentSection(int x, int y, String commentSection) {
-        javascriptExecutor(x, y);
-        addText(commentSection, this.commentSection);
     }
 }

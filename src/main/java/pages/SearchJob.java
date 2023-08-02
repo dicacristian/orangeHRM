@@ -7,16 +7,16 @@ import org.openqa.selenium.support.FindBy;
 
 public class SearchJob extends BaseTest {
 
-    @FindBy(xpath = "/html/body/div/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a")
+    @FindBy(xpath = "//a[normalize-space()='Admin']")
     private WebElement adminButton;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/header/div[2]/nav/ul/li[2]/span")
+    @FindBy(xpath = "(//span[@class='oxd-topbar-body-nav-tab-item'])[2]")
     private WebElement jobButton;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[1]/header/div[2]/nav/ul/li[2]/ul/li[1]")
+    @FindBy(xpath = "(//a[@role='menuitem'])[1]")
     private WebElement jobTitle;
 
     @FindBy(xpath = "//i[@class='oxd-icon bi-trash']")
     private WebElement deleteButton;
-    @FindBy(xpath = "//*[@id='app']/div[3]/div/div/div/div[3]/button[2]")
+    @FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin']")
     private WebElement confirmDeleteButton;
 
     public void clickAdminButton() {

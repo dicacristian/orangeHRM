@@ -9,13 +9,13 @@ public class Dependents extends BaseTest {
     private WebElement myInfoField;
     @FindBy(xpath = "//a[normalize-space()='Dependents']")
     private WebElement dependentsButton;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[1]/div/div[2]/input")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[1]//input")
     private WebElement nameField;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[2]/div/div[2]/div/div/div[1]")
+    @FindBy(xpath = "//div[@class='oxd-select-wrapper']//div[@tabindex='0']")
     private WebElement selectRelationship;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[2]/div/div[2]/div/div[2]/div[3]")
+    @FindBy(xpath = "//span[contains(text(),'Other')]")
     private WebElement chooseRelationshipStatus;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[3]/div/div[2]/input")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[3]//input")
     private WebElement specifyField;
     @FindBy(xpath = "//input[@placeholder='yyyy-mm-dd']")
     private WebElement dateOfBirth;
@@ -40,7 +40,7 @@ public class Dependents extends BaseTest {
     }
 
     public void addSpecifyField(String specifyField) {
-        addTextToDisabledTextBox(specifyField, this.specifyField);
+        addText(specifyField, this.specifyField);
     }
 
     public void addDateOfBirth(String dateOfBirth) {

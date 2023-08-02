@@ -4,32 +4,34 @@ import base.BaseTest;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class ContactDetails extends BaseTest {
     @FindBy(xpath = "//span[normalize-space()='My Info']")
     private WebElement myInfoField;
     @FindBy(xpath = "//a[normalize-space()='Contact Details']")
     private WebElement contactDetailsField;
-    @FindBy(xpath = "(//input)[2]")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[1]//input")
     private WebElement streetOneAddress;
-    @FindBy(xpath = "(//input)[3]")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[2]//input")
     private WebElement streetTwoAddress;
-    @FindBy(xpath = "(//input)[4]")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[3]//input")
     private WebElement city;
-    @FindBy(xpath = "(//input)[5]")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[4]//input")
     private WebElement state;
-    @FindBy(xpath = "(//input)[6]")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[5]//input")
     private WebElement postalCode;
     @FindBy(xpath = "//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow']")
     private WebElement chooseCountry;
-    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[6]/div/div[2]/div/div[2]/div[177]")
+    @FindBy(xpath = "//span[contains(text(),'Romania')]")
     private WebElement choosenCountry;
-    @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[7]")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[7]//input")
     private WebElement homeNumber;
-    @FindBy(xpath = "//div[@class='orangehrm-edit-employee-content']//div[2]//div[1]//div[2]//div[1]//div[2]//input[1]")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[8]//input")
     private WebElement mobile;
-    @FindBy(xpath = "//div[@class='orangehrm-edit-employee-content']//div[2]//div[1]//div[3]//div[1]//div[2]//input[1]")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[9]//input")
     private WebElement workMobile;
-    @FindBy(xpath = "//div[3]//div[1]//div[1]//div[1]//div[2]//input[1]")
+    @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[10]//input")
     private WebElement workEmail;
     @FindBy(xpath = "//input[@type='file']")
     private WebElement browseButton;
@@ -66,10 +68,12 @@ public class ContactDetails extends BaseTest {
         click(chooseCountry);
         click(choosenCountry);
     }
+
     public void addHomeNumber(String homeNumber, int x, int y) {
         javascriptExecutor(x, y);
         addText(homeNumber, this.homeNumber);
     }
+
     public void addMobile(String mobile) {
         addText(mobile, this.mobile);
     }

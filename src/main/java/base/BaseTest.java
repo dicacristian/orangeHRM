@@ -82,4 +82,20 @@ public class BaseTest extends BasePage {
             addText(text, locator);
         }
     }
+    public void clickWithRetries(WebElement element) {
+        int retryCount = 0;
+        boolean actionSuccessful = false;
+
+        while (retryCount < 5 && !actionSuccessful) {
+            try {
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].scrollIntoView(true);", element);
+                click(element);
+                actionSuccessful = true;
+            } catch (Exception e) {
+                retryCount++;
+            }
+        }
+    }
+
 }

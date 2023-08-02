@@ -28,7 +28,7 @@ public class SearchUsersTests extends BasePage {
         searchUsers().clickAdminUserRole();
         searchUsers().addEmployeeName(employeeName);
         searchUsers().clickNameEmployee();
-        searchUsers().clickSelectStatus();
+         searchUsers().clickSelectStatus();
         searchUsers().clickSearchButton();
 
     }
