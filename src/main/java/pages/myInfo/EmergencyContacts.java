@@ -50,8 +50,4 @@ public class EmergencyContacts extends BaseTest {
     public void addSaveEmergencyContactWorkTelephone(String saveEmergencyContactWorkTelephone) {
         addText(saveEmergencyContactWorkTelephone, this.saveEmergencyContactWorkTelephone);
     }
-
-    public void addFile() {
-        uploadDoc(addFileButton, "E:\\orangeHRM\\asdsad.txt");
-    }
 }

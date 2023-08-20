@@ -58,10 +58,6 @@ public class AddEmployee extends BaseTest {
         addText(employeeID, this.employeeID);
     }
 
-    public void addPhoto() {
-        String photo = "C:\\SkillBrain\\orangeHRM\\orangeHRM\\images\\photo2.jpg";
-        filePhoto.sendKeys(photo);
-    }
 
     public void clickLoginDetails() {
         click(loginDetails);

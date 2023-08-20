@@ -53,10 +53,6 @@ public class PersonalDetails extends BaseTest {
     @FindBy(xpath = "//div[@class='oxd-select-option']")
     private List<WebElement> choosenBloodType;
 
-    @FindBy(xpath = "//input[@type='file']")
-    private WebElement addFileButton;
-
-
     public void clickMyInfoSection() {
         click(myInfoField);
     }
@@ -132,9 +128,4 @@ public class PersonalDetails extends BaseTest {
         click(selectBloodType);
         action(sortRandomElem(choosenBloodType));
     }
-
-    public void addFile() {
-        uploadDoc(addFileButton, "E:\\orangeHRM\\Personal Details.txt");
-    }
-
 }

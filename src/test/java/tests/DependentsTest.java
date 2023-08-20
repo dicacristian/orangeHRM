@@ -45,7 +45,6 @@ public class DependentsTest extends BasePage {
         dependents().addDateOfBirth(dateOfBirth);
         saveButton().clickFirstSaveButton();
         addButton().clickSecondAddButtonOnThePage();
-        dependents().addFile(0, 100);
         commentsField().addCommentSection(commentSection);
         saveButton().clickSecondSaveButton();
 

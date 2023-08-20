@@ -57,7 +57,6 @@ public class PersonalDetailsTest extends BasePage {
         personalDetails().clickSelectBloodType();
         saveButton().clickSecondSaveButton();
         addButton().clickAddButton();
-        personalDetails().addFile();
         comments().addCommentSection(commentSection);
         saveButton().clickThirdSaveButton();
     }
