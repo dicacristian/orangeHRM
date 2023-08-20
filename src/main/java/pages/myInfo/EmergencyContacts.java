@@ -54,4 +54,5 @@ public class EmergencyContacts extends BaseTest {
     public void addFile() {
         uploadDoc(addFileButton, "E:\\orangeHRM\\asdsad.txt");
     }
+
 }

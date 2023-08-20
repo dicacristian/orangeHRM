@@ -31,7 +31,6 @@ public class ContactDetailsTest extends BasePage {
     public SaveButton saveButton() {
         return new SaveButton();
     }
-
     @Test(description = "Test the Contact Details Field")
     @Parameters({"username", "password", "streetOneAddress", "streetTwoAddress", "city", "state", "postalCode", "homeNumber", "mobile", "workMobile", "workEmail", "comment"})
     public void contactDetailsTest(String username, String password, String streetOneAddress, String streetTwoAddress, String city, String state, String postalCode, String homeNumber, String mobile, String workMobile, String workEmail, String comment) {

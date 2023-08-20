@@ -62,4 +62,5 @@ public class Immigration extends BaseTest {
         javascriptExecutor(x, y);
         uploadDoc(addFileButton, "E:\\orangeHRM\\Immigration.txt");
     }
+
 }

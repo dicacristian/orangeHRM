@@ -29,7 +29,6 @@ public class QualificationsTest extends BasePage {
     public SaveButton saveButton() {
         return new SaveButton();
     }
-
     @Test(description = "Test the Qualifications Field")
     @Parameters({"username", "password", "companyName", "jobTitle", "fromDate", "toDate", "workExperienceComment", "institute", "specialization", "year", "gpaScore", "startDate", "endDate", "yearsOfExperience", "commentsSkillField", "commentsLanguage", "licenseNumber", "issuedDate", "expiryDate", "commentQualification"})
     public void qualificationsTest(String username, String password, String companyName, String jobTitle, String fromDate, String toDate, String workExperienceComment, String institute, String specialization, String year, String gpaScore, String startDate, String endDate, String yearsOfExperience, String commentsSkillField, String commentsLanguage, String licenseNumber, String issuedDate, String expiryDate, String commentQualification) {

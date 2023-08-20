@@ -77,4 +77,5 @@ public class Memberships extends BaseTest {
         javascriptExecutor(x, y);
         uploadDoc(addFileButton, "E:\\orangeHRM\\Qualifications.txt");
     }
+
 }

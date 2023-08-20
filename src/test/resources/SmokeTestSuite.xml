@@ -5,104 +5,107 @@
 <suite name="Smoke Test Suite">
     <test name="Smoke Test">
         <classes>
-                                             <class name="tests.LoginPageTests">
-                                                 <methods>
-                                                     <include name="loginPageValid">
-                                                         <parameter name="username" value="Admin"></parameter>
-                                                         <parameter name="password" value="admin123"></parameter>
-                                                     </include>
-                                                     <include name="invalidPageLogin">
-                                                         <parameter name="username" value="Admin"></parameter>
-                                                         <parameter name="password" value="adminnnn"></parameter>
-                                                     </include>
-                                                 </methods>
-                                             </class>
-                                    <class name="tests.SearchUsersTests">
-                                        <methods>
-                                            <include name="searchUsers">
-                                                <parameter name="username" value="Admin"></parameter>
-                                                <parameter name="password" value="admin123"></parameter>
-                                                <parameter name="userNameSearch" value="Aaliyah.Haq"></parameter>
-                                                <parameter name="employeeName" value="Aaliyah Haq"></parameter>
-                                            </include>
-                                        </methods>
-                                    </class>
-                                                <class name="tests.SearchJobTest">
-                                                    <methods>
-                                                        <include name="searchJob">
-                                                           <parameter name="username" value="Admin"></parameter>
-                                                            <parameter name="password" value="admin123"></parameter>
-                                                        </include>
-                                                    </methods>
-                                                            </class>
-                                    <class name="tests.AddEmployeeTest">
-                                        <methods>
-                                            <include name="addEmployee">
-                                                <parameter name="username" value="Admin"></parameter>-->
-                                                <parameter name="password" value="admin123"></parameter>
-                                                <parameter name="firstName" value="Adi"></parameter>
-                                                <parameter name="middleName" value="George"></parameter>
-                                                <parameter name="lastName" value="Popa"></parameter>
-                                                <parameter name="employeeID" value="1234"></parameter>
-                                                <parameter name="usernameLoginDetails" value="adi112king12"></parameter>
-                                                <parameter name="passwordLoginDetails" value="abc123123123"></parameter>
-                                                <parameter name="confirmPasswordLoginDetails" value="abc123123123"></parameter>
-                                            </include>
-                                        </methods>
-                                    </class>
-                                    <class name="tests.PersonalDetailsTest">
-                                        <methods>
-                                            <include name="personalDetailsTest">
-                                                <parameter name="username" value="Admin"></parameter>
-                                                <parameter name="password" value="admin123"></parameter>
-                                                <parameter name="firstName" value="Dica"></parameter>
-                                                <parameter name="middleName" value="Cristian"></parameter>
-                                                <parameter name="lastName" value="Alexandru"></parameter>
-                                                <parameter name="nickName" value="Dicky"></parameter>
-                                                <parameter name="employeeId5" value="345"></parameter>
-                                                <parameter name="driverLicenseNumber" value="B045681273"></parameter>
-                                                <parameter name="licenseExpiryDate" value="2026-06-06"></parameter>
-                                                <parameter name="ssnNumber" value="SSN12345"></parameter>
-                                                <parameter name="sinNumber" value="SIN12345"></parameter>
-                                                <parameter name="dateOfBirth" value="2000-01-28"></parameter>
-                                                <parameter name="militaryService" value="No"></parameter>
-                                                <parameter name="commentSection" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry"></parameter>
-                                            </include>
-                                        </methods>
-                                    </class>
+            <class name="tests.LoginPageTests">
+                <methods>
+                    <include name="loginPageValid">
+                        <parameter name="username" value="Admin"></parameter>
+                        <parameter name="password" value="admin123"></parameter>
+                    </include>
+                    <include name="invalidPageLogin">
+                        <parameter name="username" value="Admin"></parameter>
+                        <parameter name="password" value="adminnnn"></parameter>
+                    </include>
+                </methods>
+            </class>
+            <class name="tests.SearchUsersTests">
+                <methods>
+                    <include name="searchUsers">
+                        <parameter name="username" value="Admin"></parameter>
+                        <parameter name="password" value="admin123"></parameter>
+                        <parameter name="userNameSearch" value="Aaliyah.Haq"></parameter>
+                        <parameter name="employeeName" value="Aaliyah Haq"></parameter>
+                    </include>
+                </methods>
+            </class>
+            <class name="tests.SearchJobTest">
+                <methods>
+                    <include name="searchJob">
+                        <parameter name="username" value="Admin"></parameter>
+                        <parameter name="password" value="admin123"></parameter>
+                    </include>
+                </methods>
+            </class>
+            <class name="tests.AddEmployeeTest">
+                <methods>
+                    <include name="addEmployee">
+                        <parameter name="username" value="Admin"></parameter>-->
+                        <parameter name="password" value="admin123"></parameter>
+                        <parameter name="firstName" value="Adi"></parameter>
+                        <parameter name="middleName" value="George"></parameter>
+                        <parameter name="lastName" value="Popa"></parameter>
+                        <parameter name="employeeID" value="1234"></parameter>
+                        <parameter name="usernameLoginDetails" value="adi112king12"></parameter>
+                        <parameter name="passwordLoginDetails" value="abc123123123"></parameter>
+                        <parameter name="confirmPasswordLoginDetails" value="abc123123123"></parameter>
+                    </include>
+                </methods>
+            </class>
+            <class name="tests.PersonalDetailsTest">
+                <methods>
+                    <include name="personalDetailsTest">
+                        <parameter name="username" value="Admin"></parameter>
+                        <parameter name="password" value="admin123"></parameter>
+                        <parameter name="firstName" value="Dica"></parameter>
+                        <parameter name="middleName" value="Cristian"></parameter>
+                        <parameter name="lastName" value="Alexandru"></parameter>
+                        <parameter name="nickName" value="Dicky"></parameter>
+                        <parameter name="employeeId5" value="345"></parameter>
+                        <parameter name="driverLicenseNumber" value="B045681273"></parameter>
+                        <parameter name="licenseExpiryDate" value="2026-06-06"></parameter>
+                        <parameter name="ssnNumber" value="SSN12345"></parameter>
+                        <parameter name="sinNumber" value="SIN12345"></parameter>
+                        <parameter name="dateOfBirth" value="2000-01-28"></parameter>
+                        <parameter name="militaryService" value="No"></parameter>
+                        <parameter name="commentSection"
+                                   value="Lorem Ipsum is simply dummy text of the printing and typesetting industry"></parameter>
+                    </include>
+                </methods>
+            </class>
 
-                        <class name="tests.ContactDetailsTest">
-                            <methods>
-                                <include name="contactDetailsTest">
-                                    <parameter name="username" value="Admin"></parameter>
-                                    <parameter name="password" value="admin123"></parameter>
-                                    <parameter name="streetOneAddress" value="Bd. Vasile Milea, nr.8"></parameter>
-                                    <parameter name="streetTwoAddress" value="Str. Dunarii"></parameter>
-                                    <parameter name="city" value="Bucharest"></parameter>
-                                    <parameter name="state" value="Romania"></parameter>
-                                    <parameter name="postalCode" value="123456"></parameter>
-                                    <parameter name="homeNumber" value="0712345678"></parameter>
-                                    <parameter name="mobile" value="0787456123"></parameter>
-                                    <parameter name="workMobile" value="1234567890"></parameter>
-                                    <parameter name="workEmail" value="dica792@gmail.com"></parameter>
-                                    <parameter name="comment" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry."></parameter>
-                                </include>
-                            </methods>
-                        </class>
-                        <class name="tests.EmergencyContactsTest">
-                            <methods>
-                                <include name="emergencyContactsTest">
-                                    <parameter name="username" value="Admin"></parameter>
-                                    <parameter name="password" value="admin123"></parameter>
-                                    <parameter name="saveEmergencyContactName" value="Cristian"></parameter>
-                                    <parameter name="saveEmergencyContactRelationship" value="Single"></parameter>
-                                    <parameter name="saveEmergencyContactHomeTelephone" value="0712345678"></parameter>
-                                    <parameter name="saveEmergencyContactMobile" value="0787456321"></parameter>
-                                    <parameter name="saveEmergencyContactWorkTelephone" value="1231231230"></parameter>
-                                    <parameter name="commentSection" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry."></parameter>
-                                </include>
-                            </methods>
-                        </class>
+            <class name="tests.ContactDetailsTest">
+                <methods>
+                    <include name="contactDetailsTest">
+                        <parameter name="username" value="Admin"></parameter>
+                        <parameter name="password" value="admin123"></parameter>
+                        <parameter name="streetOneAddress" value="Bd. Vasile Milea, nr.8"></parameter>
+                        <parameter name="streetTwoAddress" value="Str. Dunarii"></parameter>
+                        <parameter name="city" value="Bucharest"></parameter>
+                        <parameter name="state" value="Romania"></parameter>
+                        <parameter name="postalCode" value="123456"></parameter>
+                        <parameter name="homeNumber" value="0712345678"></parameter>
+                        <parameter name="mobile" value="0787456123"></parameter>
+                        <parameter name="workMobile" value="1234567890"></parameter>
+                        <parameter name="workEmail" value="dica792@gmail.com"></parameter>
+                        <parameter name="comment"
+                                   value="Lorem Ipsum is simply dummy text of the printing and typesetting industry."></parameter>
+                    </include>
+                </methods>
+            </class>
+            <class name="tests.EmergencyContactsTest">
+                <methods>
+                    <include name="emergencyContactsTest">
+                        <parameter name="username" value="Admin"></parameter>
+                        <parameter name="password" value="admin123"></parameter>
+                        <parameter name="saveEmergencyContactName" value="Cristian"></parameter>
+                        <parameter name="saveEmergencyContactRelationship" value="Single"></parameter>
+                        <parameter name="saveEmergencyContactHomeTelephone" value="0712345678"></parameter>
+                        <parameter name="saveEmergencyContactMobile" value="0787456321"></parameter>
+                        <parameter name="saveEmergencyContactWorkTelephone" value="1231231230"></parameter>
+                        <parameter name="commentSection"
+                                   value="Lorem Ipsum is simply dummy text of the printing and typesetting industry."></parameter>
+                    </include>
+                </methods>
+            </class>
             <class name="tests.DependentsTest">
                 <methods>
                     <include name="dependentsTest">
@@ -111,7 +114,8 @@
                         <parameter name="nameField" value="Cristian"></parameter>
                         <parameter name="dateOfBirth" value="2000-01-28"></parameter>
                         <parameter name="specifyField" value="abcd"></parameter>
-                        <parameter name="commentSection" value="Lorem Ipsum is simply dummy text of the printing and typesetting"></parameter>
+                        <parameter name="commentSection"
+                                   value="Lorem Ipsum is simply dummy text of the printing and typesetting"></parameter>
                     </include>
                 </methods>
             </class>
@@ -124,7 +128,8 @@
                         <parameter name="issuedDate" value="2019-10-10"></parameter>
                         <parameter name="expiryDate" value="2029-10-09"></parameter>
                         <parameter name="eligibleStatus" value="Unknown"></parameter>
-                        <parameter name="immigrationComment" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry."></parameter>
+                        <parameter name="immigrationComment"
+                                   value="Lorem Ipsum is simply dummy text of the printing and typesetting industry."></parameter>
                         <parameter name="commentSection" value="sum is simply dummy text of the printing"></parameter>
                     </include>
                 </methods>
@@ -138,7 +143,8 @@
                         <parameter name="jobTitle" value="QV Tester"></parameter>
                         <parameter name="fromDate" value="2021-10-25"></parameter>
                         <parameter name="toDate" value="2022-05-05"></parameter>
-                        <parameter name="workExperienceComment" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry"></parameter>
+                        <parameter name="workExperienceComment"
+                                   value="Lorem Ipsum is simply dummy text of the printing and typesetting industry"></parameter>
                         <parameter name="institute" value="University Politehnica of Bucharest"></parameter>
                         <parameter name="specialization" value="Automotive Engineering"></parameter>
                         <parameter name="year" value="2022"></parameter>

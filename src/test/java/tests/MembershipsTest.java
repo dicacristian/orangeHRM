@@ -29,7 +29,6 @@ public class MembershipsTest extends BasePage {
     public SaveButton saveButton() {
         return new SaveButton();
     }
-
     @Test(description = "Test the Memberships Field")
     @Parameters({"username", "password", "subscriptionAmount", "subcriptionCommerceDate", "subscriptionRenewalDate", "commentAddAttachmentMemberships"})
     public void membershipsTest(String username, String password, String subscriptionAmount, String subcriptionCommerceDate, String subscriptionRenewalDate, String commentAddAttachmentMemberships) {

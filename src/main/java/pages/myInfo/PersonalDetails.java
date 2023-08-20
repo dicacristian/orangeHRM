@@ -137,4 +137,5 @@ public class PersonalDetails extends BaseTest {
         uploadDoc(addFileButton, "E:\\orangeHRM\\Personal Details.txt");
     }
 
+
 }

@@ -29,7 +29,6 @@ public class ImigrationTest extends BasePage {
     public SaveButton saveButton() {
         return new SaveButton();
     }
-
     @Test(description = "Test the Immigration Field")
     @Parameters({"username", "password", "numberInput", "issuedDate", "expiryDate", "eligibleStatus", "immigrationComment", "commentSection"})
     public void immigrationTest(String username, String password, String numberInput, String issuedDate, String expiryDate, String eligibleStatus, String immigrationComment, String commentSection) {

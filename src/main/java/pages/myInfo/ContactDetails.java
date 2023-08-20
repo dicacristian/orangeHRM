@@ -89,4 +89,5 @@ public class ContactDetails extends BaseTest {
     public void addFile() {
         uploadDoc(browseButton, "C:\\Users\\Dicky\\Downloads\\IMG_0500.jpeg");
     }
+
 }

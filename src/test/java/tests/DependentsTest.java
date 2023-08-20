@@ -48,6 +48,5 @@ public class DependentsTest extends BasePage {
         dependents().addFile(0, 100);
         commentsField().addCommentSection(commentSection);
         saveButton().clickSecondSaveButton();
-
     }
 }

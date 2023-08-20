@@ -51,4 +51,5 @@ public class Dependents extends BaseTest {
         javascriptExecutor(x, y);
         uploadDoc(addFileButton, "E:\\orangeHRM\\Dependents.txt");
     }
+
 }
