@@ -74,8 +74,6 @@ public class Qualifications extends BaseTest {
     @FindBy(xpath = "(//input[@placeholder='yyyy-mm-dd'])[2]")
     private WebElement expiryDate;
 
-    @FindBy(xpath = "//input[@type='file']")
-    private WebElement addFileButton;
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[7]/div/form/div[2]/div/div/div/div[2]/textarea")
     private WebElement commentQualification;
 
@@ -183,11 +181,6 @@ public class Qualifications extends BaseTest {
 
     public void addExpiryDate(String expiryDate) {
         addText(expiryDate, this.expiryDate);
-    }
-
-
-    public void addFile() {
-        uploadDoc(addFileButton, "E:\\orangeHRM\\Qualifications.txt");
     }
 
 

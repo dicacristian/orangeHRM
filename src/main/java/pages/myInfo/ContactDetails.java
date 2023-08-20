@@ -33,8 +33,7 @@ public class ContactDetails extends BaseTest {
     private WebElement workMobile;
     @FindBy(xpath = "(//div[@class='oxd-input-group oxd-input-field-bottom-space'])[10]//input")
     private WebElement workEmail;
-    @FindBy(xpath = "//input[@type='file']")
-    private WebElement browseButton;
+
 
     public void clickMyInfoSection() {
         click(myInfoField);
@@ -86,7 +85,4 @@ public class ContactDetails extends BaseTest {
         addText(workEmail, this.workEmail);
     }
 
-    public void addFile() {
-        uploadDoc(browseButton, "C:\\Users\\Dicky\\Downloads\\IMG_0500.jpeg");
-    }
 }

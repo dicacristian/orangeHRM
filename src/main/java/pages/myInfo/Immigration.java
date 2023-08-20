@@ -26,8 +26,7 @@ public class Immigration extends BaseTest {
     @FindBy(xpath = "(//input[@placeholder='yyyy-mm-dd'])[3]")
     private WebElement eligibleReviewDate;
 
-    @FindBy(xpath = "//input[@type='file']")
-    private WebElement addFileButton;
+
 
     public void clickMyInfoSection() {
         click(myInfoField);
@@ -58,8 +57,5 @@ public class Immigration extends BaseTest {
         action(sortRandomElem(countryChoosen));
     }
 
-    public void addFile(int x, int y) {
-        javascriptExecutor(x, y);
-        uploadDoc(addFileButton, "E:\\orangeHRM\\Immigration.txt");
-    }
+
 }
