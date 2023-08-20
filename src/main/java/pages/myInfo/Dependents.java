@@ -19,7 +19,8 @@ public class Dependents extends BaseTest {
     private WebElement specifyField;
     @FindBy(xpath = "//input[@placeholder='yyyy-mm-dd']")
     private WebElement dateOfBirth;
-
+    @FindBy(xpath = "//input[@type='file']")
+    private WebElement addFileButton;
 
     public void clickMyInfoSection() {
         click(myInfoField);
@@ -46,5 +47,8 @@ public class Dependents extends BaseTest {
         addText(dateOfBirth, this.dateOfBirth);
     }
 
-
+    public void addFile(int x, int y) {
+        javascriptExecutor(x, y);
+        uploadDoc(addFileButton, "E:\\orangeHRM\\Dependents.txt");
+    }
 }

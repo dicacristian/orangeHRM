@@ -72,6 +72,7 @@ public class QualificationsTest extends BasePage {
         qualifications().addExpiryDate(expiryDate);
         saveButton().clickFiveSaveButton();
         addButton().clickSixAddButtonOnThePage();
+        qualifications().addFile();
         commentsField().addCommentSection(commentQualification);
         saveButton().clickSixSaveButton();
     }

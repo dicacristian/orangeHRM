@@ -32,6 +32,10 @@ public class Memberships extends BaseTest {
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[1]/div/div[6]/div/div[2]/div/div[2]/div/div[4]/div/div[3]")
     private WebElement closeSubscriptionRenewalDate;
 
+    @FindBy(xpath = "//input[@type='file']")
+    private WebElement addFileButton;
+
+
     public void clickMyInfoSection() {
         click(myInfoField);
     }
@@ -69,5 +73,8 @@ public class Memberships extends BaseTest {
         click(closeSubscriptionRenewalDate);
     }
 
-
+    public void addFile(int x, int y) {
+        javascriptExecutor(x, y);
+        uploadDoc(addFileButton, "E:\\orangeHRM\\Qualifications.txt");
+    }
 }
