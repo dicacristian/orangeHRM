@@ -82,4 +82,5 @@ public class BaseTest extends BasePage {
             addText(text, locator);
         }
     }
+
 }
