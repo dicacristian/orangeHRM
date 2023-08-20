@@ -47,6 +47,7 @@ public class MembershipsTest extends BasePage {
         memberships().addSubscriptionRenewalDate(subscriptionRenewalDate);
         saveButton().clickFirstSaveButton();
         addButton().clickSecondAddButtonOnThePage();
+        memberships().addFile(0, 100);
         commentsField().addCommentSection(commentAddAttachmentMemberships);
         saveButton().clickSecondSaveButton();
     }
