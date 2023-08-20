@@ -28,7 +28,6 @@ public class AddEmployeeTest extends BasePage {
         addEmployee().addMiddleName(middleName);
         addEmployee().addLastName(lastName);
         addEmployee().addEmployeeID(employeeID);
-        addEmployee().addPhoto();
         addEmployee().clickLoginDetails();
         addEmployee().clickStatusDetails();
         addEmployee().addUsernameLoginDetails(usernameLoginDetails);

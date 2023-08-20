@@ -132,9 +132,4 @@ public class PersonalDetails extends BaseTest {
         click(selectBloodType);
         action(sortRandomElem(choosenBloodType));
     }
-
-    public void addFile() {
-        uploadDoc(addFileButton, "E:\\orangeHRM\\Personal Details.txt");
-    }
-
 }

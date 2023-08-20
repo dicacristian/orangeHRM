@@ -52,7 +52,6 @@ public class ContactDetailsTest extends BasePage {
         contactDetails().addWorkEmail(workEmail);
         saveButton().clickFirstSaveButton();
         addButton().clickAddButton();
-        contactDetails().addFile();
         commentsField().addCommentSection(comment);
         saveButton().clickSecondSaveButton();
     }

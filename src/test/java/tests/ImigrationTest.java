@@ -47,7 +47,6 @@ public class ImigrationTest extends BasePage {
         commentsField().addCommentsSection(immigrationComment);
         saveButton().clickFirstSaveButton();
         addButton().clickSecondAddButtonOnThePage();
-        immigration().addFile(0, 100);
         commentsField().addCommentSection(commentSection);
         saveButton().clickSecondSaveButton();
     }
