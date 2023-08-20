@@ -19,6 +19,8 @@ public class EmergencyContacts extends BaseTest {
     private WebElement saveEmergencyContactMobile;
     @FindBy(xpath = "(//input)[6]")
     private WebElement saveEmergencyContactWorkTelephone;
+    @FindBy(xpath = "//input[@type='file']")
+    private WebElement addFileButton;
 
     public void clickMyInfoSection() {
         click(myInfoField);
@@ -49,4 +51,7 @@ public class EmergencyContacts extends BaseTest {
         addText(saveEmergencyContactWorkTelephone, this.saveEmergencyContactWorkTelephone);
     }
 
+    public void addFile() {
+        uploadDoc(addFileButton, "E:\\orangeHRM\\asdsad.txt");
+    }
 }

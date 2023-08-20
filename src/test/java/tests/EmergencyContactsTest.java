@@ -46,6 +46,7 @@ public class EmergencyContactsTest extends BasePage {
         emergencyContacts().addSaveEmergencyContactWorkTelephone(saveEmergencyContactWorkTelephone);
         saveButton().clickFirstSaveButton();
         addButton().clickSecondAddButtonOnThePage();
+        emergencyContacts().addFile();
         commentsField().addCommentSection(commentSection);
         saveButton().clickSecondSaveButton();
 
