@@ -24,7 +24,7 @@ https://github.com/dicacristian/orangeHRM/assets/85904271/fbad59cf-0dfc-4bcb-85f
 * Install and configure Java for your Operation System
 * Setup your IDE
 * Import cloned repository as project
-* To run tests, search and click in repository clone the file "SmokeTestSuite.xml" and run
+* To run tests, go to src -> test -> resources  and click the file "SmokeTestSuite.xml" and run
 
 
 
